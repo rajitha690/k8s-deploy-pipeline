@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     // Make sure Dockerfile is inside app/ directory
-                    sh 'docker build -t ${IMAGE_NAME}:${TAG} ./app'
+                    sh 'docker build -t ${IMAGE_NAME}:${TAG} .'
                 }
             }
         }
