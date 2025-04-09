@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'your-dockerhub-username/flask-app:latest'
+        DOCKER_IMAGE = 'swpanahd/flask-app:latest'
         KUBECONFIG_CREDENTIAL_ID = 'kubeconfig-cred'  // Jenkins credential for KUBECONFIG
         DOCKER_CREDENTIAL_ID = 'dockerhub-cred'      // Jenkins credential for DockerHub login
     }
