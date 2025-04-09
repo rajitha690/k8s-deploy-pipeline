@@ -4,7 +4,7 @@ pipeline {
     environment {
         IMAGE_NAME = "swpanahd/k8s-deploy-pipeline"
         TAG = "v1"
-        KUBECONFIG = "/home/ubuntu/kubeconfig"
+        KUBECONFIG = "/var/lib/jenkins/kubeconfig"  // ✅ Updated path
     }
 
     stages {
