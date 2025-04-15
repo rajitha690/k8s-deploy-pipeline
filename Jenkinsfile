@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "swpanahd/k8s-deploy-pipeline"
+        IMAGE_NAME = "dimpleswapna/k8s-deploy-pipeline"
         TAG = "v1"
         KUBECONFIG = "/var/lib/jenkins/kubeconfig"  // ✅ Updated path
     }
