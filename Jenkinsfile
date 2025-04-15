@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "swpanahd/k8s-deploy-pipeline"
+        IMAGE_NAME = "rajitha390/k8s-deploy-pipeline"
         TAG = "v1"
         KUBECONFIG = "/var/lib/jenkins/kubeconfig"  // ✅ Updated path
     }
@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/dimpleswapna/k8s-deploy-pipeline.git'
+                    url: 'https://github.com/rajitha690/k8s-deploy-pipeline.git'
             }
         }
 
@@ -25,7 +25,7 @@ pipeline {
 
         stage('Push Docker Image') {
             steps {
-                withDockerRegistry([ credentialsId: 'dockerhub-creds', url: '' ]) {
+                withDockerRegistry([ credentialsId: 'docker-credentials', url: '' ]) {
                     sh "docker push $IMAGE_NAME:$TAG"
                 }
             }
