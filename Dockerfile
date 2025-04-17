@@ -13,4 +13,4 @@ RUN pip install -r requirements.txt
 RUN pip install gunicorn
 
 # Set the command to run the app using Gunicorn (binding to 0.0.0.0:5000 to accept external traffic)
-CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "main:app"]
